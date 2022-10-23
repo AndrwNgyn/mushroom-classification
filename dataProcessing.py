@@ -6,7 +6,7 @@ import joblib
 from sklearn.preprocessing import LabelEncoder
 
 
-data = pd.read_csv("mushrooms.csv")
+data = pd.read_csv("data_csvs/mushrooms.csv")
 
 cap_shape={"b":"bell","c":"conical","x":"convex","f":"flat","k":"knobbed","s":"sunken"}
 data["cap-shape"]=data["cap-shape"].replace(cap_shape)
@@ -109,7 +109,6 @@ def encodeData(input):
     for col in input.columns:
         le.fit(data[col])
         input[col] = le.transform(input[col])
-    print(input)
     return input
 
 def scaleData(input):
@@ -129,9 +128,12 @@ if __name__ == "__main__":
        'free', 'close', 'broad', 'black', 'enlarging', 'club', 'smooth',
        'smooth', 'white', 'white', 'partial', 'white', 'one', 'pendant',
        'brown', 'numerous', 'grasses']
+
+    test_input2 = ['bell', 'fibrous', 'brown', 'bruises', 'almond', 'attached', 'close', 'broad', 'black', 'enlarging', 'bulbous', 'fibrous', 'fibrous', 'brown', 'brown', 'partial', 'brown', 'one', 'cobwebby', 'black', 'abundant', 'grasses']
     
     # print(convertToDataFrame(test_input))
     print(processData(test_input))
+    print(processData(test_input2))
     
     '''
     test_input = pd.DataFrame({'cap-shape': ['convex'],

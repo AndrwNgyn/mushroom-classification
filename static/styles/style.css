@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'Karla';
+    src: url('Fonts/Karla-VariableFont_wght.ttf');
+    font-weight: 'Variable';
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('Fonts/Karla-Italic-VariableFont_wght.ttf');
+    font-weight: 'Italic';
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #faedcd;
+    background: -webkit-linear-gradient(
+        to right, 
+        #d4a373,
+        #cdb4db
+    );
+    background: linear-gradient(
+        to right, 
+        #d4a373,
+        #cdb4db
+    );
+}
+
+
+
+h1 {
+    font-family: 'Karla', sans-serif;
+    font-weight: 'Italic';
+    font-size: 65px;
+    margin: 0
+}
+
+h2 {
+    font-family: 'Karla', sans-serif;
+    font-weight: 'Variable';
+    font-size: 35px;
+    margin: 0
+}
+
+h3 {
+    font-family: 'Karla', sans-serif;
+    font-weight: 'Variable';
+    font-size: 20px;
+    margin: 0
+}
+
+p {
+    font-family: 'Karla', sans-serif;
+    font-weight: 'Variable';
+    font-size: 20px;
+}
+
+select {
+    font-family: 'Karla', sans-serif;
+    font-weight: 'Variable';
+    font-size: 20px;
+    
+}
+
+input {
+    font-family: 'Karla', sans-serif;
+    font-weight: 'Variable';
+    font-size: 20px;
+}
+
+.mushroom-block{
+    float: right;
+}
+
+.mushroom-qualities{
+    font-family: 'Karla', sans-serif;
+    font-weight: 'Variable';
+    font-size: 20px;
+}
