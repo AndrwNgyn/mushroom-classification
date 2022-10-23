@@ -17,7 +17,7 @@ app = Flask(__name__)
 
 
 # model = load_model('models\model.h5')
-model = tf.keras.models.load_model('models\model.h5')
+model = tf.keras.models.load_model('.\models\model.h5')
 
 
 @app.route('/')
