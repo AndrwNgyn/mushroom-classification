@@ -5,9 +5,10 @@ Created on Mon Oct 17 19:07:57 2022
 @author: andrwngyn
 """
 
-import numpy as np
 from flask import Flask, request, render_template
-from keras.models import load_model
+# from keras.models import load_model
+import tensorflow as tf
+from tensorflow import keras
 
 from dataProcessing import processData
 
@@ -15,7 +16,8 @@ from dataProcessing import processData
 app = Flask(__name__)
 
 
-model = load_model('models\model.h5')
+# model = load_model('models\model.h5')
+model = tf.keras.models.load_model('models\model.h5')
 
 
 @app.route('/')
