@@ -73,7 +73,32 @@ data["bruises"]=data["bruises"].replace(bruises)
 classification={"e":"edible","p":"poisonous"}
 data["class"]=data["class"].replace(classification)
 
+def convertToDataFrame(input_list):
+    mushroom_template = pd.DataFrame(columns = ['cap-shape',
+                                                'cap-surface',
+                                                'cap-color',
+                                                'bruises',
+                                                'odor',
+                                                'gill-attachment',
+                                                'gill-spacing',
+                                                'gill-size',
+                                                'gill-color',
+                                                'stalk-shape',
+                                                'stalk-root',
+                                                'stalk-surface-above-ring',
+                                                'stalk-surface-below-ring',
+                                                'stalk-color-above-ring',
+                                                'stalk-color-below-ring',
+                                                'veil-type',
+                                                'veil-color',
+                                                'ring-number',
+                                                'ring-type',
+                                                'spore-print-color',
+                                                'population',
+                                                'habitat'])
 
+    mushroom_template.loc[len(mushroom_template)] = input_list
+    return mushroom_template
 
 def encodeData(input):
     '''
@@ -88,23 +113,27 @@ def encodeData(input):
     return input
 
 def scaleData(input):
-    scaler = joblib.load('scaled.save')
+    scaler = joblib.load('models\scaled.save')
     input = scaler.transform(input)
     return input
 
 def processData(input):
-    data = encodeData(input)
+    data = convertToDataFrame(input)
+    data = encodeData(data)
     data = scaleData(data)
     return data
 
-'''
 if __name__ == "__main__":
   
-    test_input = [['convex', 'smooth', 'yellow', 'bruises', 'almond',
+    test_input = ['convex', 'smooth', 'yellow', 'bruises', 'almond',
        'free', 'close', 'broad', 'black', 'enlarging', 'club', 'smooth',
        'smooth', 'white', 'white', 'partial', 'white', 'one', 'pendant',
-       'brown', 'numerous', 'grasses']]
-
+       'brown', 'numerous', 'grasses']
+    
+    # print(convertToDataFrame(test_input))
+    print(processData(test_input))
+    
+    '''
     test_input = pd.DataFrame({'cap-shape': ['convex'],
                                 'cap-surface': ['smooth'],
                                 'cap-color': ['yellow'],
@@ -162,4 +191,3 @@ if __name__ == "__main__":
     print(classification_report(y_test,predictions))
     print(confusion_matrix(y_test, predictions))    
     '''
-    
