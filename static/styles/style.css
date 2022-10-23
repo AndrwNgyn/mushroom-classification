@@ -11,19 +11,19 @@
 }
 
 body {
-    height: 100vh;
+    height: 115vh;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: #faedcd;
+    background: #bfb4bb;
     background: -webkit-linear-gradient(
-        to right, 
-        #d4a373,
+        to bottom, 
+        #bfb4bb,
         #cdb4db
     );
     background: linear-gradient(
-        to right, 
-        #d4a373,
+        to bottom, 
+        #bfb4bb,
         #cdb4db
     );
 }
@@ -33,41 +33,34 @@ body {
 h1 {
     font-family: 'Karla', sans-serif;
     font-weight: 'Italic';
-    font-size: 65px;
-    margin: 0
-}
-
-h2 {
-    font-family: 'Karla', sans-serif;
-    font-weight: 'Variable';
-    font-size: 35px;
+    font-size: 27px;
     margin: 0
 }
 
 h3 {
     font-family: 'Karla', sans-serif;
     font-weight: 'Variable';
-    font-size: 20px;
+    font-size: 18px;
     margin: 0
 }
 
 p {
     font-family: 'Karla', sans-serif;
     font-weight: 'Variable';
-    font-size: 20px;
+    font-size: 18px;
 }
 
 select {
     font-family: 'Karla', sans-serif;
     font-weight: 'Variable';
-    font-size: 20px;
+    font-size: 15px;
     
 }
 
-input {
+button {
     font-family: 'Karla', sans-serif;
     font-weight: 'Variable';
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .mushroom-block{
@@ -77,5 +70,11 @@ input {
 .mushroom-qualities{
     font-family: 'Karla', sans-serif;
     font-weight: 'Variable';
-    font-size: 20px;
+    font-size: 15px;
+}
+
+.signature{
+    font-family: 'Karla', sans-serif;
+    font-weight: 'Variable';
+    font-size: 10px;
 }

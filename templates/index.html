@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href = "style.css" />
 
     <title>Mushroom Classifier</title>
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
@@ -23,14 +22,13 @@
 </head>
 
 <body>
-    <h1>Mushroom Classifier</h1>
-    <h2>Is your mushroom safe to eat?</h2>
-
+    <h1>MUSHROOM CLASSIFIER</h1>
+    <img style="height: 140px;" src="{{ url_for('static', filename='images/mushroom-dance-mushroom.gif') }}"/>
     <p>
-        Fill out the form to determine if your mushroom is edible or poisonous!
+        Is your mushroom safe to eat? Fill out the form to find out!
     </p>
 
-    <form action="{{ url_for('predict')}}" class="mushroom-block" method = "post">
+    <form action="{{ url_for('predict')}}" class="mushroom-block" method = "post" style="background-color: #edede9;">
         <fieldset>
             <div class = "mushroom-qualities">
                 <label for="cap-shape">Cap Shape:</label>
@@ -60,7 +58,6 @@
                     <option value="" disabled selected></option>
                     <option value="brown">brown</option>
                     <option value="buff">buff</option>
-                    <option value="cinammon">cinammon</option>
                     <option value="gray">gray</option>
                     <option value="green">green</option>
                     <option value="pink">pink</option>
@@ -98,9 +95,7 @@
                 <select name="gill-attachment" id = "gill-attachment" required = True>
                     <option value="" disabled selected></option>
                     <option value="attached">attached</option>
-                    <option value="descending">descending</option>
                     <option value="free">free</option>
-                    <option value="notched">notched</option>
                 </select>
             </div>
             <div class = "mushroom-qualities">
@@ -109,7 +104,6 @@
                     <option value="" disabled selected></option>
                     <option value="close">close</option>
                     <option value="crowded">crowded</option>
-                    <option value="distant">distant</option>
                 </select>
             </div>
             <div class = "mushroom-qualities">
@@ -152,9 +146,7 @@
                     <option value="" disabled selected></option>
                     <option value="bulbous">bulbous</option>
                     <option value="club">club</option>
-                    <option value="cup">cup</option>
                     <option value="equal">equal</option>
-                    <option value="rhizomorphs">rhizomorphs</option>
                     <option value="rooted">rooted</option>
                     <option value="missing">missing</option>
                 </select>
@@ -185,7 +177,6 @@
                     <option value="" disabled selected></option>
                     <option value="brown">brown</option>
                     <option value="buff">buff</option>
-                    <option value="cinammon">cinammon</option>
                     <option value="gray">gray</option>
                     <option value="orange">orange</option>
                     <option value="pink">pink</option>
@@ -200,7 +191,6 @@
                     <option value="" disabled selected></option>
                     <option value="brown">brown</option>
                     <option value="buff">buff</option>
-                    <option value="cinammon">cinammon</option>
                     <option value="gray">gray</option>
                     <option value="orange">orange</option>
                     <option value="pink">pink</option>
@@ -214,7 +204,6 @@
                 <select name="veil-type" id = "veil-type" required = True>
                     <option value="" disabled selected></option>
                     <option value="partial">partial</option>
-                    <option value="universal">universal</option>
                 </select>
             </div>
             <div class = "mushroom-qualities">
@@ -240,14 +229,11 @@
                 <label for="ring-type">Ring Type:</label>
                 <select name="ring-type" id = "ring-type" required = True>
                     <option value="" disabled selected></option>
-                    <option value="cobwebby">cobwebby</option>
                     <option value="evanescent">evanescent</option>
                     <option value="flaring">flaring</option>
                     <option value="large">large</option>
                     <option value="none">none</option>
                     <option value="pendant">pendant</option>
-                    <option value="sheathing">sheathing</option>
-                    <option value="zone">zone</option>
                 </select>
             </div>
             <div class = "mushroom-qualities">
@@ -290,18 +276,18 @@
                     <option value="woods">woods</option>
                 </select>
             </div>
+            <br>
+            <br>
+            <h3 style="text-align: center">
+            {{ prediction_text }}</h3>
+            <div style="text-align: center"><p>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Determine Edibility</button></p>
+            </div>
+            <div class= "signature">
+                <label for="andrew">Created by Andrew Nguyen, 2022</label>
+            </div>
         </fieldset>
-        <br><br>
-        <h3 style="text-align: center">
-            {{ prediction_text }}
-        </h3>
-        <div style="text-align: center">
-            <input type="submit" value="Determine Edibility">
-        </div>
-      </form>
+    </form>
 
 </body>
-
-
-
 </html>

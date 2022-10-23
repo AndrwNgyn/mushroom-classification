@@ -131,10 +131,13 @@ if __name__ == "__main__":
 
     test_input2 = ['bell', 'fibrous', 'brown', 'bruises', 'almond', 'attached', 'close', 'broad', 'black', 'enlarging', 'bulbous', 'fibrous', 'fibrous', 'brown', 'brown', 'partial', 'brown', 'one', 'cobwebby', 'black', 'abundant', 'grasses']
     
-    # print(convertToDataFrame(test_input))
-    print(processData(test_input))
-    print(processData(test_input2))
     
+    # print(convertToDataFrame(test_input))
+    # print(processData(test_input))
+    # print(processData(test_input2))
+    
+    print(data['habitat'].unique())
+
     '''
     test_input = pd.DataFrame({'cap-shape': ['convex'],
                                 'cap-surface': ['smooth'],

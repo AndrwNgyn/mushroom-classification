@@ -30,13 +30,16 @@ def predict():
     data = processData(mushroom_features)
     predictions = model.predict(data)
 
-    if predictions > 0.5:
+    if predictions[0][0] > 0.5:
         result = 'poisonous'
     else:
         result = 'edible'
 
     print(mushroom_features)
-    return render_template('index.html', prediction_test =f'Mushroom is {result}')
+    print(predictions[0][0])
+    prediction_result = f'Mushroom is {result}'
+    print(prediction_result)
+    return render_template('index.html', prediction_text = prediction_result)
 
 
 
