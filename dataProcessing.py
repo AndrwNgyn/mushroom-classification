@@ -138,6 +138,7 @@ if __name__ == "__main__":
     
     print(data['habitat'].unique())
 
+
     '''
     test_input = pd.DataFrame({'cap-shape': ['convex'],
                                 'cap-surface': ['smooth'],
