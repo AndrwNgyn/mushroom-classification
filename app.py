@@ -40,8 +40,9 @@ def predict():
     print(mushroom_features)
     print(predictions[0][0])
     prediction_result = f'Mushroom is {result}'
+    accuracy = predictions[0][0] 
     print(prediction_result)
-    return render_template('index.html', prediction_text = prediction_result)
+    return render_template('index.html', prediction_text = prediction_result, accuracy = accuracy)
 
 
 
