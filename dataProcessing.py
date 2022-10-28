@@ -3,6 +3,7 @@
 
 import pandas as pd
 import joblib
+import os
 from sklearn.preprocessing import LabelEncoder
 
 
@@ -112,7 +113,8 @@ def encodeData(input):
     return input
 
 def scaleData(input):
-    scaler = joblib.load('models\scaled.save')
+    model_location = os.path.join('models', 'scaled.save')
+    scaler = joblib.load(model_location)
     input = scaler.transform(input)
     return input
 

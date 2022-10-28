@@ -9,6 +9,7 @@ from flask import Flask, request, render_template
 # from keras.models import load_model
 import tensorflow as tf
 from tensorflow import keras
+import os
 
 from dataProcessing import processData
 
@@ -17,7 +18,8 @@ app = Flask(__name__)
 
 
 # model = load_model('models\model.h5')
-model = tf.keras.models.load_model('.\models\model.h5')
+model_location = os.path.join('models', 'model.h5')
+model = tf.keras.models.load_model(model_location)
 
 
 @app.route('/')
