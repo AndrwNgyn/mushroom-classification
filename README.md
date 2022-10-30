@@ -5,7 +5,7 @@ Simple classification model to determine whether mushrooms are poisonous or not.
 - Data trained is sourced from Kaggle, and can be found at https://www.kaggle.com/datasets/uciml/mushroom-classification 
 
 # Running the app 
-- This app is hosted on Heroku! You can locate the application on https://mushroom-classifier-anguyen.herokuapp.com/
+- **This app is hosted on Heroku!** You can locate the application on https://mushroom-classifier-anguyen.herokuapp.com/
 - Note that the website may require 30 seconds - 1 minute to load 
 
 ## Prerequisites 
@@ -31,7 +31,7 @@ Simple classification model to determine whether mushrooms are poisonous or not.
    conda install -c anaconda tensorflow
    ```   
 
-## Running the App & Usage  
+## Running the App & Usage (Locally)
 - Simply run the ```App.py``` file, and locate http://127.0.0.1:5000 on your desired browser
 - Follow the directions on the projected website to determine mushroom edibility 
 - When finished, run ```ctrl + C``` on your terminal to terminate the server
