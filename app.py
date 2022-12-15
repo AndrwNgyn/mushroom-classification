@@ -43,8 +43,14 @@ def predict():
     print(predictions[0][0])
     prediction_result = f'Mushroom is {result}'
     accuracy = predictions[0][0] 
+    if result == "edible":
+        accuracy = 1 - accuracy
+    accuracy = round(accuracy*100, 3)
     print(prediction_result)
-    return render_template('index.html', prediction_text = prediction_result, accuracy = accuracy)
+
+    print(accuracy)
+    accuracy_result = f'Confidence: %{accuracy}'
+    return render_template('index.html', prediction_text = prediction_result, accuracy = accuracy_result)
 
 
 

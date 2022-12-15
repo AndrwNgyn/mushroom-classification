@@ -74,27 +74,12 @@ data["bruises"]=data["bruises"].replace(bruises)
 classification={"e":"edible","p":"poisonous"}
 data["class"]=data["class"].replace(classification)
 
+data = data[["class", "cap-color", "odor", "gill-color", "population", "habitat"]]
+
 def convertToDataFrame(input_list):
-    mushroom_template = pd.DataFrame(columns = ['cap-shape',
-                                                'cap-surface',
-                                                'cap-color',
-                                                'bruises',
+    mushroom_template = pd.DataFrame(columns = ['cap-color',
                                                 'odor',
-                                                'gill-attachment',
-                                                'gill-spacing',
-                                                'gill-size',
                                                 'gill-color',
-                                                'stalk-shape',
-                                                'stalk-root',
-                                                'stalk-surface-above-ring',
-                                                'stalk-surface-below-ring',
-                                                'stalk-color-above-ring',
-                                                'stalk-color-below-ring',
-                                                'veil-type',
-                                                'veil-color',
-                                                'ring-number',
-                                                'ring-type',
-                                                'spore-print-color',
                                                 'population',
                                                 'habitat'])
 
@@ -126,19 +111,18 @@ def processData(input):
 
 if __name__ == "__main__":
   
-    test_input = ['convex', 'smooth', 'yellow', 'bruises', 'almond',
-       'free', 'close', 'broad', 'black', 'enlarging', 'club', 'smooth',
-       'smooth', 'white', 'white', 'partial', 'white', 'one', 'pendant',
-       'brown', 'numerous', 'grasses']
+    test_input = ['yellow', 'almond',
+       'black', 'numerous', 'grasses']
 
     test_input2 = ['bell', 'fibrous', 'brown', 'bruises', 'almond', 'attached', 'close', 'broad', 'black', 'enlarging', 'bulbous', 'fibrous', 'fibrous', 'brown', 'brown', 'partial', 'brown', 'one', 'cobwebby', 'black', 'abundant', 'grasses']
     
     
-    # print(convertToDataFrame(test_input))
-    # print(processData(test_input))
+    print(convertToDataFrame(test_input))
+    print(processData(test_input))
     # print(processData(test_input2))
     
-    print(data['habitat'].unique())
+    
+    # print(data['habitat'].unique())
 
 
     '''
