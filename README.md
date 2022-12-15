@@ -3,6 +3,7 @@ Simple classification model to determine whether mushrooms are poisonous or not.
 
 - This model was created via ANNs, including Adam optimizer, dropout layers, and callbacks. 
 - Data trained is sourced from Kaggle, and can be found at https://www.kaggle.com/datasets/uciml/mushroom-classification 
+- DISCLAIMER: There is discussion of the data yielding 100% accuracy when trained on NN architechture, as well as the data is outdated.
 
 # Running the app 
 - **This app is hosted on Heroku!** You can locate the application on https://mushroom-classifier-anguyen.herokuapp.com/
