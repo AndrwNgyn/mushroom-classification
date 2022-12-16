@@ -50,6 +50,13 @@ p {
     font-size: 18px;
 }
 
+a {
+    font-family: 'Karla', sans-serif;
+    font-weight: 'Variable';
+    font-size: 13px;
+}
+
+
 select {
     font-family: 'Karla', sans-serif;
     font-weight: 'Variable';
